@@ -28,13 +28,10 @@ public class DefaultShell implements ShellParse {
     public String[] parse(String orders) {
         String[] result = new String[0];
         String[] order = orders.split("\\|");
-        System.out.println("order[0] " + order[0]);
         for(String command : order){
-            System.out.println("执行" + command);
             String[] commandWord = command.trim().split(" ");
             for(PipeParse pipeParse : parseList){
                 if(pipeParse.fit(commandWord)){
-                    System.out.println("匹配成功");
                     result = pipeParse.parse(commandWord, result);
                     break;
                 }

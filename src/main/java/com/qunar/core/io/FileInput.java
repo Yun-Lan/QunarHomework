@@ -13,12 +13,9 @@ public class FileInput {
 
 //        ClassLoader classLoader = ClassLoader.getSystemClassLoader();
         URL url = FileInput.class.getClassLoader().getResource(fileName);
-        System.out.println(fileName);
-        System.out.println(url);
         File file = new File(url.getFile());
         byte[] fileContent = new byte[(int)file.length()];
         InputStream in = FileInput.class.getClassLoader().getResourceAsStream(fileName);
-        System.out.println(in);
         try {
 
             in.read(fileContent);
