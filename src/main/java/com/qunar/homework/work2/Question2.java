@@ -11,7 +11,7 @@ public class Question2 {
         int correctCodeNum = 0;       //有效行数计数
         try {
             //读取文件
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("F:\\qunar\\Question 2\\StringUtils.java"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("F:\\ideaProject\\QunarHomework\\src\\main\\resources\\StringUtils.java"));
             String code = bufferedReader.readLine();
             String trimCode = null;
             //去除字符串首尾空格
